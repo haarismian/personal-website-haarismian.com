@@ -4,9 +4,11 @@ The personal website for Haaris Mian. It's a single static page (`index.html`) h
 
 ## Editing
 
-- All text is in `index.html`. Search for `EDIT:` to find the spots that still need real links or a photo.
-- To add a photo, put `photo.jpg` in this folder and replace the "HM" placeholder block with
-  `<img src="photo.jpg" alt="Haaris Mian">`.
+- All text is in `index.html`.
+- **Links:** near the bottom of `index.html`, find the `LINKS` block and paste your full URLs
+  (Professor Town, YouTube, LinkedIn) between the quotes. Any link you leave empty shows as
+  plain text, and its nav icon stays hidden.
+- The "Contact me" and "Work with me" buttons open an email to mail@haarismian.com.
 
 ## Going live (one-time setup)
 
