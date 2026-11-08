@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Haaris Mian</title>
-  <meta name="description" content="Hi, I'm Haaris. I help professionals land teaching and research roles at universities and colleges.">
+  <meta name="description" content="Hi, I'm Haaris. I run Professor Town, helping professionals become professors, and Blackframe, an AI consulting firm.">
   <meta property="og:title" content="Haaris Mian">
-  <meta property="og:description" content="I help professionals land teaching and research roles at universities and colleges.">
+  <meta property="og:description" content="I run Professor Town, helping professionals become professors, and Blackframe, an AI consulting firm.">
   <meta property="og:url" content="https://haarismian.com">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,10 +70,13 @@
 
     /* ---------- Feature ---------- */
     .feature {
-      max-width: 700px; margin: 0 auto 100px;
+      max-width: 700px; margin: 0 auto 72px;
       display: grid; grid-template-columns: 140px 1fr; gap: 36px; align-items: center;
     }
+    .feature:last-child { margin-bottom: 100px; }
     .feature svg { width: 100%; height: auto; }
+    .feature .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn-outline { background: #fff; color: #000; border: 1px solid #000; }
     h2 {
       font-family: Merriweather, Georgia, serif; font-weight: 400;
       font-size: 36px; line-height: 1.2; letter-spacing: -0.03em;
@@ -88,7 +91,8 @@
       .btn-sm { margin-left: 6px; }
       .hero { padding: 72px 0 48px; }
       .intro { font-size: 18px; }
-      .feature { grid-template-columns: 1fr; text-align: center; gap: 20px; margin-bottom: 72px; }
+      .feature { grid-template-columns: 1fr; text-align: center; gap: 20px; margin-bottom: 64px; }
+      .feature .actions { justify-content: center; }
       .feature svg { width: 120px; margin: 0 auto; display: block; }
       h2 { font-size: 30px; }
     }
@@ -96,7 +100,7 @@
 </head>
 <body>
 
-  <!-- Graduation cap drawing, reused in the nav and the feature section -->
+  <!-- Drawings: graduation cap (Professor Town, also the nav logo) and Blackframe mark -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="cap" viewBox="0 0 240 200">
       <path d="M62 92 L62 140 C62 160 178 160 178 140 L178 92" fill="#2b4c7e" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
@@ -108,6 +112,13 @@
       <path d="M186 136 L206 136 L212 172 L180 172 Z" fill="#f4a623" stroke="#000" stroke-width="6" stroke-linejoin="round"/>
       <path d="M189 150 L203 150 M187 161 L205 161" stroke="#c97d0a" stroke-width="3" stroke-linecap="round"/>
     </symbol>
+    <!-- Blackframe mark: a black frame with an AI spark -->
+    <symbol id="frame" viewBox="0 0 240 200">
+      <rect x="40" y="20" width="160" height="160" rx="26" fill="#111" stroke="#000" stroke-width="7"/>
+      <rect x="62" y="42" width="116" height="116" rx="12" fill="#fff" stroke="#000" stroke-width="6"/>
+      <path d="M120 58 C124 88 132 96 162 100 C132 104 124 112 120 142 C116 112 108 104 78 100 C108 96 116 88 120 58 Z" fill="#7c5cff" stroke="#000" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M156 54 C157 63 159 65 168 66 C159 67 157 69 156 78 C155 69 153 67 144 66 C153 65 155 63 156 54 Z" fill="#f4a623" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+    </symbol>
   </svg>
 
   <header>
@@ -116,6 +127,7 @@
       <ul class="nav-links">
         <li><a class="active" href="/">Home</a></li>
         <li><a data-link="professorTown" href="#">Professor Town</a></li>
+        <li><a data-link="blackframe" href="#">Blackframe</a></li>
         <li><a data-link="youtube" href="#">YouTube</a></li>
       </ul>
       <div class="nav-right">
@@ -134,10 +146,10 @@
     <section class="hero">
       <h1>Hi, I'm Haaris 👋</h1>
       <p class="intro">
-        I help professionals become professors. I run
-        <a data-link="professorTown" href="#">Professor Town</a>,
-        make <a data-link="youtube" href="#">videos</a> about landing teaching and research roles,
-        and write the applications that get my clients hired.
+        I run <a data-link="professorTown" href="#">Professor Town</a>, where I help
+        professionals become professors, and <a data-link="blackframe" href="#">Blackframe</a>,
+        an AI consulting firm. I also make <a data-link="youtube" href="#">videos</a>
+        about landing teaching and research roles.
       </p>
     </section>
 
@@ -146,7 +158,22 @@
       <div>
         <h2>Ready to teach at a university?</h2>
         <p>One-on-one coaching plus academic CVs, cover letters and teaching statements, for professionals moving into sessional, college and full-time faculty roles.</p>
-        <a class="btn btn-lg" href="mailto:mail@haarismian.com?subject=Working%20with%20you">Work with me</a>
+        <div class="actions">
+          <a class="btn btn-lg" href="mailto:mail@haarismian.com?subject=Professor%20Town%20coaching">Work with me</a>
+          <a class="btn btn-lg btn-outline" data-link="professorTown" data-hide-if-empty href="#">Visit Professor Town</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <svg role="img" aria-label="Blackframe logo mark"><use href="#frame"/></svg>
+      <div>
+        <h2>Bring AI into your business</h2>
+        <p>Blackframe is my AI consulting firm. We help businesses figure out where AI fits and then put it to work.</p>
+        <div class="actions">
+          <a class="btn btn-lg" data-link="blackframe" href="#">Visit Blackframe</a>
+          <a class="btn btn-lg btn-outline" href="mailto:mail@haarismian.com?subject=Blackframe%20AI%20consulting">Get in touch</a>
+        </div>
       </div>
     </section>
   </main>
@@ -159,6 +186,7 @@
     // plain text (and its nav icon is hidden) until you fill it in.
     const LINKS = {
       professorTown: "",
+      blackframe: "https://blackframeai.com/",
       youtube: "",
       linkedin: "",
     };
