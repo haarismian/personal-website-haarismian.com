@@ -6,7 +6,7 @@ The personal website for Haaris Mian. It's a single static page (`index.html`) h
 
 - All text is in `index.html`.
 - **Links:** near the bottom of `index.html`, find the `LINKS` block and paste your full URLs
-  (Professor Town, Blackframe, YouTube, LinkedIn) between the quotes. Any link you leave empty shows as
+  (Professor Town, BlackFrame AI, YouTube, LinkedIn) between the quotes. Any link you leave empty shows as
   plain text, and its nav icon stays hidden.
 - The "Contact me" and "Work with me" buttons open an email to mail@haarismian.com.
 
